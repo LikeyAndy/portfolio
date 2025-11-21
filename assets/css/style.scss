@@ -1,0 +1,76 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Custom styles for portfolio
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --border-color: #e0e0e0;
+}
+
+// Enhanced section styling
+section {
+  margin-bottom: 2.5rem;
+}
+
+// Badge styling improvements
+a[href*="github.com"],
+a[href*="linkedin.com"],
+a[href*="CV-Andy-Chen.pdf"] {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+}
+
+// Center alignment for header badges
+div[align="center"] {
+  margin: 2rem 0;
+}
+
+// Improved list styling
+ul, ol {
+  line-height: 1.8;
+}
+
+// Better spacing for project sections
+h2, h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+// Horizontal rule styling
+hr {
+  border: none;
+  border-top: 2px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+// Code block improvements
+pre, code {
+  border-radius: 4px;
+}
+
+// Responsive improvements
+@media (max-width: 768px) {
+  div[align="center"] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+// Print styles for resume link
+@media print {
+  a[href*="CV-Andy-Chen.pdf"] {
+    display: block;
+    margin: 1rem 0;
+  }
+}
